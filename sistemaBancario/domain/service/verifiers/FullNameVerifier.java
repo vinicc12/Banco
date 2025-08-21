@@ -5,28 +5,6 @@ import sistemaBancario.domain.util.SentenceFormatting;
 import java.util.Scanner;
 
 public class FullNameVerifier {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        while (true){
-            try {
-                String nome = sc.nextLine();
-                validadeFullName(nome);
-                System.out.println(SentenceFormatting.refactoringName(nome));
-            }catch (IllegalArgumentException e){
-                System.out.println(e.getMessage());
-            }finally {
-                System.out.println();
-            }
-        }
-    }
-
-
-
-
-
-
-
     private static final char[] ALLOWED_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáâãéêíóôõúçÁÂÉÊÍÓÔÚ ".toCharArray();
 
     public static void validadeFullName(String name) {
@@ -59,3 +37,4 @@ public class FullNameVerifier {
 
 
 }
+
